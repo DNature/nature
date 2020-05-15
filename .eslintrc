@@ -27,7 +27,8 @@
     "plugin:promise/recommended",
     "plugin:unicorn/recommended",
     "plugin:import/errors",
-    "plugin:import/typescript"
+    "plugin:import/typescript",
+    "plugin:prettier/recommended"
   ],
   "rules": {
     "max-len": [2, 120],
