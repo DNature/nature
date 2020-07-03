@@ -21,6 +21,7 @@
   ],
   "extends": [
     "airbnb-typescript",
+    "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:eslint-comments/recommended",
     "plugin:jest/recommended",
@@ -69,10 +70,7 @@
         }
       }
     ],
-    "eslint-comments/disable-enable-pair": [
-      "error",
-      { "allowWholeFile": true }
-    ],
+    "eslint-comments/disable-enable-pair": ["error", { "allowWholeFile": true }],
     "import/order": [
       "error",
       {

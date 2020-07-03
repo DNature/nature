@@ -5,3 +5,6 @@
 # untouched files of CRA
 serviceWorker.ts
 react-app-env.d.ts
+
+postcss.config.js
+tailwind.generated.css

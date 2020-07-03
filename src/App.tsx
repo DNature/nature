@@ -14,7 +14,7 @@ function App() {
           and save to reload.
         </p>
         <a
-          className='App-link'
+          className='App-link bg-teal-500 font-bold text-5xl'
           href='https://reactjs.org'
           target='_blank'
           rel='noopener noreferrer'

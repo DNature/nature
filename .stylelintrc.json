@@ -24,7 +24,6 @@
       }
     ],
     "max-empty-lines": 2,
-    "unit-whitelist": ["em", "rem", "%", "vh", "vw", "vmax", "vmin", "s", "deg"],
     "value-list-comma-newline-after": null,
     "declaration-colon-newline-after": null
   }

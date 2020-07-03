@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fullhuman/postcss-purgecss": "^2.2.0",
     "@testing-library/dom": "^7.5.5",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -11,12 +12,21 @@
     "@types/node": "^12.0.0",
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
+    "autoprefixer": "^9.8.0",
+    "classnames": "^2.2.6",
+    "cssnano": "^4.1.10",
+    "postcss-preset-env": "^6.7.0",
+    "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
+    "tailwindcss": "^1.4.6",
     "typescript": "~3.7.2"
   },
   "scripts": {
+    "build:css": "postcss src/assets/index.css -o src/assets/tailwind.generated.css",
+    "prestart": "yarn build:css",
+    "prebuild": "yarn build:css",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -51,6 +61,7 @@
     "@storybook/addons": "^5.3.18",
     "@storybook/preset-create-react-app": "^2.1.2",
     "@storybook/react": "^5.3.18",
+    "@types/classnames": "^2.2.10",
     "@typescript-eslint/eslint-plugin": "^2.33.0",
     "@typescript-eslint/parser": "^2.33.0",
     "eslint-config-airbnb-typescript": "^7.2.1",
@@ -66,16 +77,14 @@
     "eslint-plugin-unicorn": "^20.0.0",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.2",
+    "postcss-cli": "^7.1.1",
     "prettier": "^2.0.5",
     "stylelint": "^13.3.3",
     "stylelint-config-css-modules": "^2.2.0",
     "stylelint-config-standard": "^20.0.0"
   },
   "husky": {
-    "hooks": {
-      "pre-commit": "yarn lint && yarn format",
-      "pre-push": "yarn test"
-    }
+    "hooks": {}
   },
   "lint-staged": {
     "*.+(ts|tsx|json|yml|yaml|css|md|scss)": [

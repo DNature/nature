@@ -1,9 +1,16 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const Button = () => (
+interface B {
+  children: React.ReactNode;
+}
+
+const Button: React.FC<B> = ({ children }) => (
   <>
-    <button>Hello world</button>
+    <button className='px-2 py-5'>{children}</button>
   </>
 );
+
+Button.propTypes = { children: PropTypes.node.isRequired };
 
 export default Button;
